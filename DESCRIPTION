@@ -2,15 +2,17 @@ Package: ResearchR
 Type: Package
 Title: Tools for Statistical Visualization and Inference in R
 Version: 0.1.0
-Authors@R: c(
+Authors@R:
     person(
-      "Julian", "Jacklin",
-      email = "jacklin@aclanyc.com"
+      "Julian",
+      "Jacklin",
+      email = "jacklin@aclanyc.com",
+      role = c("aut", "cre")
     )
-  )
-Description: This package is meant to support students in 
-    ACLA's AP Seminar and AP Research courses conduct data analysis tasks
-    in a modern programming environment.
+Description: Easy-to-use statistical analysis and visualization functions including
+    linear regression, logistic regression, t-tests, and ANOVA. This package supports the 
+    work of AP Seminar and AP Research students at All City Leadership Secondary School, in 
+    Brooklyn, NY, USA. 
 Encoding: UTF-8
 LazyData: true
 Imports: 
