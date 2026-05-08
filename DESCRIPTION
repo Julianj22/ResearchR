@@ -1,17 +1,16 @@
 Package: ResearchR
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Tools for Statistical Visualization and Inference in R
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
+      "Julian", "Jacklin",
+      email = "jacklin@aclanyc.com"
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Description: This package is meant to support students in 
+    ACLA's AP Seminar and AP Research courses conduct data analysis tasks
+    in a modern programming environment.
 Encoding: UTF-8
 LazyData: true
 Imports: 
