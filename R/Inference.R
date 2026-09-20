@@ -63,10 +63,6 @@ logistic_regression <- function(data, x, y) {
 
   if (!is.data.frame(data)) stop("Woah now! Data must be a data frame.")
 
-  if (!is.numeric(data[[x_name]])) {
-    stop("Wait a minute... your x variable must be numeric!")
-  }
-
   if (length(unique(data[[y_name]])) != 2) {
     stop("Stop... your y variable must be binary!")
   }
