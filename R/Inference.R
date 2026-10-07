@@ -56,10 +56,11 @@ simple_linear_regression <- function(data, x, y) {
 #' regression coefficient, p-value, Adjusted R-Squared.
 #' @export
 
-logistic_regression <- function(data, x, y) {
+logistic_regression <- function(data, x, y, covariate=NULL) {
 
   x_name <- deparse(substitute(x))
   y_name <- deparse(substitute(y))
+  cov_name <- deparse(substitute(covariate))
 
   if (!is.data.frame(data)) stop("Woah now! Data must be a data frame.")
 
@@ -67,7 +68,7 @@ logistic_regression <- function(data, x, y) {
     stop("Stop... your y variable must be binary!")
   }
 
-  form <- as.formula(paste(y_name, "~", x_name))
+  form <- as.formula(paste(y_name, "~", x_name, "+", cov_name))
   model_sum <- summary(glm(form, data = data, family = binomial))
 
   slope <- model_sum$coefficients[2, 1]
@@ -107,6 +108,7 @@ t_test <- function(data, x, y) {
 
   x_name <- deparse(substitute(x))
   y_name <- deparse(substitute(y))
+  
 
   if (!is.data.frame(data)) stop("Woah now! Data must be a data frame.")
 
